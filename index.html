@@ -1,113 +1,154 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-  <meta charset    = "UTF-8">
-  <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-  <meta name       = "viewport" content        = "width=device-width, initial-scale=1.0">
-  <title>My Geek Blog</title>
-  <link rel  = "stylesheet" href                                                     = "styles.css">
-  <link href = "https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel = "stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeonByte Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div id    = "loading">
-  <div class = "loader"></div>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="scanner">
+      <div class="scan-line"></div>
+    </div>
+    <div class="loading-text">SYSTEM INITIALIZING...</div>
   </div>
 
-  <div class = "background">
-  <div id    = "stars"></div>
-  <div id    = "stars2"></div>
-  <div id    = "stars3"></div>
+  <!-- Background Elements -->
+  <div class="cyberpunk-background">
+    <div class="punk-bg"></div>
+    <div class="grid"></div>
+    <div class="glitch-overlay"></div>
+    <div class="neon-particles"></div>
+  </div>
+  
+  <!-- Floating Face Element -->
+  <div class="floating-face">
+    <div class="face-container">
+      <img src="/assets/images/face.png" alt="Floating Face">
+      <div class="face-glow"></div>
+    </div>
+    <div class="face-particle-container"></div>
   </div>
 
-  <header>
-    <div class = "container">
-    <div class = "profile-picture">
-    <img src   = "Zane.jpg" alt = "Profile Picture">
+  <!-- Navigation -->
+  <nav class="cyber-nav">
+    <div class="logo">
+      <span class="neon-text">NEON</span><span class="cyber-text">BYTE</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link" data-text="HOME">HOME</a>
+      <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+      <a href="#blog" class="nav-link" data-text="BLOG">BLOG</a>
+      <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+    </div>
+    <div class="nav-controls">
+      <button id="toggleMode" class="cyber-button"><i class="fas fa-lightbulb"></i><span>切换主题</span></button>
+    </div>
+  </nav>
+
+  <!-- Main Header -->
+  <header id="home">
+    <div class="container">
+      <div class="profile-container">
+        <div class="profile-picture">
+          <img src="/assets/images/NPC.jpeg" alt="Zane Liao">
+          <div class="profile-glow"></div>
+        </div>
+        <div class="header-text">
+          <h1 class="glitch" data-text="ZANE LIAO">ZANE LIAO</h1>
+          <div class="console-container">
+            <span id="console-text"></span><span class="console-cursor">_</span>
+          </div>
+        </div>
       </div>
-      <div class = "header-text">
-        <h1>Zane Liao's Blog</h1>
-        <p>Become an independent developer.😎</p>
-        <button id = "toggleMode">Toggle Night Mode</button>
+      <div class="header-decoration">
+        <div class="neon-bar"></div>
+        <div class="neon-bar"></div>
+        <div class="neon-bar"></div>
       </div>
     </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href = "#home" class  = "nav-link">Home</a></li>
-      <li><a href = "#about" class = "nav-link">About</a></li>
-      <li><a href = "#blog" class  = "nav-link">Blog</a></li>
-    </ul>
-  </nav>
-
+  <!-- Main Content -->
   <main>
-    <div     class = "container">
-    <section id    = "about">
-        <h2>About Me</h2>
-        <p>👋 Hey there! I'm a young guy from Asia with a passion for exploration and creativity.</p>
-      </section>
-
-      <section id = "blog">
-        <h2>Blog Posts</h2>
-        <div   class = "blog-post">
-        <h3><a href  = "#">First Blog Post</a></h3>
-          <p>Introduction to my blog and what you can expect to find here.</p>
+    <!-- About Section -->
+    <section id="about" class="cyber-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="cyber-heading">关于我<span class="blink">_</span></h2>
+          <div class="cyber-decoration"></div>
         </div>
-        <button id = "loadMore">Load More Posts</button>
-      </section>
-    </div>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="cyber-text">👋 大家好！我的想法是学习计算机科学，之后做独立开发，最终目标是创业和实现自己的想法。</p>
+            <div class="tech-stack">
+              <span class="tech-badge">Swift</span>
+              <span class="tech-badge">Rust</span>
+              <span class="tech-badge">C++</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Algorithms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="cyber-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="cyber-heading">博客<span class="blink">_</span></h2>
+          <div class="cyber-decoration"></div>
+        </div>
+        <div class="blog-grid" id="blog-posts">
+          <!-- 博客文章将通过JavaScript动态加载 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="cyber-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="cyber-heading">联系方式<span class="blink">_</span></h2>
+          <div class="cyber-decoration"></div>
+        </div>
+        <div class="contact-content">
+          <div class="social-links">
+            <a href="https://github.com/Zane-Liao" class="social-link" target="_blank">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:lzq666amn@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class = "container">
-      <p>&copy; 2024 My Geek Blog. All rights reserved.</p>
-      <p><a href = "https://github.com/Zane-Liao">GitHub</a> | <a href = "mailto:lzq666amn@gmail.com">Email</a></p>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2025 NeonByte Blog. All rights reserved.</p>
+          <p class="cyber-small">以<span class="neon-text">Zane-Liao</span>实现</p>
+        </div>
+        <div class="footer-decoration">
+          <div class="neon-line"></div>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const loading = document.getElementById('loading');
-      setTimeout(() => {
-        loading.style.display = 'none';
-      }, 2000);
-
-      const toggleModeButton = document.getElementById('toggleMode');
-      toggleModeButton.addEventListener('click', function () {
-        document.body.classList.toggle('night-mode');
-        document.querySelector('header').classList.toggle('night-mode');
-        document.querySelector('footer').classList.toggle('night-mode');
-      });
-
-      const blogSection    = document.getElementById('blog');
-      const loadMoreButton = document.getElementById('loadMore');
-      loadMoreButton.addEventListener('click', function () {
-        const newPost = document.createElement('div');
-        newPost.classList.add('blog-post');
-        newPost.innerHTML = `
-          <h3><a href = "#">New Blog Post</a></h3>
-          <p>This is a new dynamically loaded blog post.</p>
-        `;
-        blogSection.insertBefore(newPost, loadMoreButton);
-      });
-
-      document.querySelectorAll('.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });
-      });
-
-      const newPostContent   = document.getElementById('newPostContent');
-      const wordCountDisplay = document.getElementById('wordCount');
-      newPostContent.addEventListener('input', function () {
-        const wordCount                    = this.value.trim().split(/\s+/).filter(word => word.length > 0).length;
-              wordCountDisplay.textContent = `Word Count: ${wordCount}`;
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

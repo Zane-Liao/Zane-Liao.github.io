@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": "independent-development",
+      "title": "从0到1的独立开发者之路",
+      "date": "30.03.2025", 
+      "summary": "记录一下我的APPidea, 以及我的一些想法.",
+      "tags": ["Swift", "Design", "Document"],
+      "featured": false
+    },
+    {
+      "id": "cs144-series",
+      "title": "斯坦福CS144网络实验解析",
+      "date": "20.04.2025",
+      "summary": "深入解析斯坦福大学CS144计算机网络课程的实验内容及我的实现过程。",
+      "tags": ["Networks", "C++", "TCP/IP", "Academic"],
+      "featured": true,
+      "collection": "cs144-series",
+      "collection_order": 1,
+      "language": "zh-CN"
+    }
+  ],
+  "collections": [
+    {
+      "id": "cs144-lab",
+      "title": "Stanford CS144 Networking Series",
+      "title_zh": "斯坦福CS144网络系列",
+      "description": "A comprehensive guide to Stanford's CS144 Computer Networking course and labs",
+      "description_zh": "斯坦福大学CS144计算机网络课程和实验的全面指南",
+      "posts": [
+        "cs144-series"
+      ]
+    }
+  ]
+}

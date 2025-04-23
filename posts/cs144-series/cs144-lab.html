@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>斯坦福CS144网络实验 - 个人博客</title>
+  <meta name="description" content="深入解析斯坦福大学CS144计算机网络课程的实验内容及我的实现过程。">
+  <link rel="stylesheet" href="../../styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="post-page">
+  <!-- 导航 -->
+
+  <nav class="cyber-nav">
+    <div class="logo">
+      <a href="../../index.html"><span class="neon-text">NEON</span><span class="cyber-text">BYTE</span></a>
+    </div>
+    <div class="nav-links">
+      <a href="../../index.html" class="nav-link" data-text="HOME">HOME</a>
+    </div>
+  </nav>
+
+
+  <div class="cyberpunk-background">
+    <div class="punk-bg"></div>
+    <div class="grid"></div>
+    <div class="glitch-overlay"></div>
+    <div class="neon-particles"></div>
+  </div>
+  
+  
+  <div class="container">
+    <!-- 文章大纲 -->
+    <div class="post-outline">
+      <h3>目录</h3>
+      <ul class="outline-list">
+        <li><a href="#intro">课程简介</a></li>
+        <li><a href="#overview">CS144实验概述</a></li>
+        <li><a href="#checkpoint0">Checkpoint 0: 可靠字节流与应用层协议</a></li>
+        <li><a href="#checkpoint1">Checkpoint 1: TCP的准备与重组器</a></li>
+        <li><a href="#checkpoint2">Checkpoint 2: TCP接收器</a></li>
+        <li><a href="#checkpoint3">Checkpoint 3: TCP发送器</a></li>
+        <li><a href="#checkpoint4">Checkpoint 4: TCP与真实网络互操作</a></li>
+        <li><a href="#checkpoint5">Checkpoint 5: 网络接口与ARP</a></li>
+        <li><a href="#checkpoint6">Checkpoint 6: IP路由器</a></li>
+        <li><a href="#checkpoint7">Checkpoint 7: 网络协议栈整合</a></li>
+      </ul>
+    </div>
+    
+    <!-- 集合导航 -->
+    <div class="collection-navigation">
+      <h3>斯坦福CS144网络系列</h3>
+      <ul>
+        <li><a href="cs144-lab.html" class="active">实验解析（中文）</a></li>
+        <li><a href="/posts/cs144-series.html">查看全部系列</a></li>
+        <!-- 未来可能添加的其他相关文章 -->
+        <li><a href="#">课程笔记（待添加）</a></li>
+        <li><a href="#">项目展示（待添加）</a></li>
+      </ul>
+    </div>
+    
+    <article class="full-post">
+      <header class="post-header">
+        <h1 class="post-title">斯坦福CS144网络实验解析</h1>
+        <div class="post-meta">
+          <span class="post-date">15.07.2023</span>
+          <div class="post-tags">
+            <span class="tag">计算机网络</span>
+            <span class="tag">TCP/IP</span>
+            <span class="tag">系统编程</span>
+          </div>
+        </div>
+      </header>
+      
+      <div class="post-content">
+        <p>斯坦福大学的CS144（计算机网络导论）是一门经典的网络课程，其实验部分要求学生从零实现一个完整的网络协议栈，深入理解计算机网络的核心概念和实现细节。本文将详细解析CS144实验的各个部分，了解如何从最基础的字节流开始，一步步构建出完整的网络通信系统。</p>
+        
+        <h2 id="intro">课程简介</h2>
+        <p>CS144课程由斯坦福大学计算机科学系提供，旨在教授计算机网络的基础知识和实践技能。该课程通过一系列精心设计的实验项目，引导学生逐步实现一个功能完整的网络协议栈，涵盖从应用层到数据链路层的各个方面。</p>
+        
+        <h2 id="overview">CS144实验概述</h2>
+        <p>CS144的实验分为8个检查点（Checkpoint 0-7），每个检查点都专注于网络协议栈的特定部分。通过这一系列实验，学生将实现：</p>
+        <ul>
+          <li>可靠字节流抽象</li>
+          <li>TCP协议的核心组件</li>
+          <li>网络接口和ARP协议</li>
+          <li>IP路由器</li>
+          <li>完整的网络协议栈集成</li>
+        </ul>
+        
+        <h2 id="checkpoint0">Checkpoint 0: 可靠字节流与应用层协议</h2>
+        <p>第一个检查点引入了可靠字节流的概念，这是贯穿整个实验的核心抽象。在这个阶段，学生需要：</p>
+        <ul>
+          <li>理解可靠字节流的概念及其在网络通信中的重要性</li>
+          <li>手动使用telnet实现HTTP GET请求获取网页</li>
+          <li>手动使用telnet实现SMTP协议发送电子邮件</li>
+          <li>实现一个简单的内存中可靠字节流数据结构</li>
+        </ul>
+        
+        <p>这个检查点的关键在于理解应用层协议的基本交互方式，以及字节流如何作为底层抽象支持这些协议。</p>
+        
+        <h2 id="checkpoint1">Checkpoint 1: TCP的准备与重组器</h2>
+        <p>第二个检查点开始为实现TCP做准备，重点是实现Reassembler（重组器）组件，用于处理乱序到达的数据片段：</p>
+        <ul>
+          <li>接收可能乱序、重叠或存在间隙的字符串片段</li>
+          <li>将这些片段按正确顺序重组成连续的字节流</li>
+          <li>处理内存限制，确保不超过指定的容量</li>
+        </ul>
+        
+        <p>重组器是TCP可靠传输的关键组件，负责处理网络中的乱序问题，确保数据以正确的顺序交付给应用程序。</p>
+        
+        <h2 id="checkpoint2">Checkpoint 2: TCP接收器</h2>
+        <p>第三个检查点实现TCP Receiver（接收器），负责处理接收端的TCP逻辑：</p>
+        <ul>
+          <li>处理SYN和FIN标志，建立和终止连接</li>
+          <li>处理TCP序列号（seqno）到字节流索引的转换</li>
+          <li>处理32位序列号的回绕问题</li>
+          <li>计算接收窗口大小，实现流量控制</li>
+          <li>生成确认号（ackno）</li>
+        </ul>
+        
+        <p>TCP接收器的实现需要理解TCP头部各字段的含义，以及序列号空间与字节流索引之间的映射关系。</p>
+        
+        <h2 id="checkpoint3">Checkpoint 3: TCP发送器</h2>
+        <p>第四个检查点实现TCP Sender（发送器），负责处理发送端的TCP逻辑：</p>
+        <ul>
+          <li>从输入流读取数据并生成TCP报文段</li>
+          <li>处理SYN和FIN标志，建立和终止连接</li>
+          <li>实现滑动窗口算法，进行流量控制</li>
+          <li>维护重传定时器</li>
+          <li>实现超时重传机制和指数退避算法</li>
+        </ul>
+        
+        <p>TCP发送器是TCP协议中最复杂的部分之一，需要实现精确的定时器、窗口管理和重传策略。</p>
+
+//  <pre><code class="language-cpp"></code>你的代码</code></pre>
+        
+        <h2 id="checkpoint4">Checkpoint 4: TCP与真实网络互操作</h2>
+        <p>第五个检查点将实现的TCP协议栈与真实世界的网络进行互操作：</p>
+        <ul>
+          <li>使用webget工具连接到互联网上的服务器</li>
+          <li>分析网络路径的性能特性（延迟、带宽、丢包率等）</li>
+          <li>测试TCP协议栈在不同网络环境下的表现</li>
+        </ul>
+        
+        <p>这个检查点帮助学生理解TCP协议如何在实际网络环境中工作，以及网络性能参数如何影响协议行为。</p>
+        
+        <h2 id="checkpoint5">Checkpoint 5: 网络接口与ARP</h2>
+        <p>第六个检查点深入到网络层以下，实现网络接口和ARP协议：</p>
+        <ul>
+          <li>将IP数据报封装到以太网帧中</li>
+          <li>实现地址解析协议（ARP）</li>
+          <li>维护ARP缓存</li>
+          <li>处理ARP请求和响应</li>
+        </ul>
+        
+        <p>这个检查点让学生理解数据链路层的工作原理，以及IP地址与MAC地址之间的映射关系。</p>
+        
+        <h2 id="checkpoint6">Checkpoint 6: IP路由器</h2>
+        <p>第七个检查点实现IP路由器，负责转发IP数据报：</p>
+        <ul>
+          <li>实现路由表，存储路由条目</li>
+          <li>实现最长前缀匹配算法</li>
+          <li>处理TTL字段</li>
+          <li>计算IP校验和</li>
+          <li>将数据报转发到正确的出接口</li>
+        </ul>
+        
+        <p>IP路由器是网络层的核心组件，负责实现互联网中的数据包转发功能。</p>
+        
+        <h2 id="checkpoint7">Checkpoint 7: 网络协议栈整合</h2>
+        <p>最后一个检查点将前面实现的所有组件整合成一个完整的网络协议栈：</p>
+        <ul>
+          <li>将TCP、网络接口和路由器组件连接起来</li>
+          <li>实现完整的网络通信过程</li>
+          <li>与其他学生实现的协议栈进行互操作测试</li>
+        </ul>
+        
+        <p>这个综合性的检查点让学生了解网络协议栈各层之间的交互方式，以及一个完整的网络通信过程是如何工作的。</p>
+        
+      </div>
+      
+      <div class="post-navigation">
+        <a href="../index.html" class="cyber-button"><i class="fas fa-arrow-left"></i><span>返回首页</span></a>
+      </div>
+    </article>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>&copy; 2025 NeonByte Blog. All rights reserved.</p>
+          <p class="cyber-small">以<span class="neon-text">Zane-Liao</span>实现</p>
+        </div>
+        <div class="footer-decoration">
+          <div class="neon-line"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../script.js"></script>
+</body>
+</html> 
