@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://zane-liao.github.io/al-folio/sitemap.xml
+Sitemap: https://luminous-manatee-4ebc50.netlify.app//sitemap.xml
