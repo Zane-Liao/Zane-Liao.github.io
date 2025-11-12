@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://luminous-manatee-4ebc50.netlify.app//sitemap.xml
+Sitemap: https://zane-liao.netlify.app//sitemap.xml
