@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://localhost:4000/al-folio/sitemap.xml
+Sitemap: https://zane-liao.github.io/al-folio/sitemap.xml
