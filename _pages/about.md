@@ -26,8 +26,9 @@ latest_posts:
 ---
 
 Hi everyone! I'm Zane Liao from China.
-I'm passionate about Computer Science and Artificial Intelligence, focusing on human-centered alignment and engineering practical, reliable AI systems.
-My work emphasizes building AI that aligns with human values while maintaining strong performance and robustness.
+I'm passionate about Computer Science and Artificial Intelligence, focusing on human-centered alignment LLM and engineering practical, reliable AI Agent systems.
+Besides that, I'm currently learning how to build production-level machine learning pipelines (MLOps) to real-world applications.
+My main focus is on building reliable and stable agents, and periodically releasing some interesting software programs.
 I'm also an Apple Developer member, a rock guitar enthusiast, and an outdoor cycling lover who enjoys discovering inspiration on the road. 🚴‍♂️🎸
 
 (I will be posting some of my blog posts; I'm currently working on improving this website.)
