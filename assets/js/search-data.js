@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-supervised-learning",
+            },{id: "post-policy-gradient",
+        
+          title: "Policy Gradient",
+        
+        description: "Policy Gradient Derivation Process",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/policy/";
+          
+        },
+      },{id: "post-supervised-learning",
         
           title: "Supervised Learning",
         
@@ -94,17 +105,6 @@ ninja.data = [{
             window.location.href = "/blog/2025/deep/";
           
         },
-      },{id: "post-debug-tricks",
-        
-          title: "Debug tricks",
-        
-        description: "Introduction to Debug with Operating System",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/debug/";
-          
-        },
       },{id: "post-black-scholes-model",
         
           title: "Black-Scholes Model",
@@ -114,6 +114,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/bs/";
+          
+        },
+      },{id: "post-debug-tricks",
+        
+          title: "Debug tricks",
+        
+        description: "Introduction to Debug with Operating System",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/debug/";
           
         },
       },{id: "post-linear-factor-model",
