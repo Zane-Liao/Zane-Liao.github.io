@@ -72,7 +72,29 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-black-scholes-model",
+            },{id: "post-supervised-learning",
+        
+          title: "Supervised Learning",
+        
+        description: "Introduction to Machine Learning",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/sul/";
+          
+        },
+      },{id: "post-deep-learning",
+        
+          title: "Deep Learning",
+        
+        description: "Introduction to Machine Learning",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/deep/";
+          
+        },
+      },{id: "post-black-scholes-model",
         
           title: "Black-Scholes Model",
         
