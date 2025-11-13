@@ -25,5 +25,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi everyone, I'm Zane Liao from China. I love computer science and artificial intelligence applications, and I'm dedicated to building safe and reliable AI agent system. I enjoy exploring the underlying principles. Besides that, I'm also an Apple developer member and a rock guitar enthusiast.
+Hi everyone! I'm Zane Liao from China.
+I'm passionate about Computer Science and Artificial Intelligence, focusing on human-centered alignment and engineering practical, reliable AI systems.
+My work emphasizes building AI that aligns with human values while maintaining strong performance and robustness.
+I'm also an Apple Developer member, a rock guitar enthusiast, and an outdoor cycling lover who enjoys discovering inspiration on the road. 🚴‍♂️🎸
+
 (I will be posting some of my blog posts; I'm currently working on improving this website.)
