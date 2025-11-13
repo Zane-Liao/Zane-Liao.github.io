@@ -72,7 +72,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-linear-factor-model",
+            },{id: "post-black-scholes-model",
+        
+          title: "Black-Scholes Model",
+        
+        description: "Introduction to Black-Scholes Model in Factor Investing",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/bs/";
+          
+        },
+      },{id: "post-linear-factor-model",
         
           title: "Linear Factor Model",
         
