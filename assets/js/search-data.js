@@ -72,11 +72,11 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-plotly-js",
+            },{id: "post-linear-factor-model",
         
-          title: "a post with plotly.js",
+          title: "Linear Factor Model",
         
-        description: "this is what included plotly.js code could look like",
+        description: "Introduction to Linear Factor Models in Factor Investing",
         section: "Posts",
         handler: () => {
           
