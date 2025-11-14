@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head -->
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <!-- Metadata, OpenGraph and Schema.org -->
+
+
+
+
+<!-- Standard metadata -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>
+  
+  
+    
+      Deep Learning | Zane Liao
+    
+  
+</title>
+<meta name="author" content="Zane Liao">
+<meta name="description" content="Introduction to Machine Learning">
+
+  <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
+
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
+
+
+
+<!-- Fonts & Icons -->
+<link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
+<link defer rel="stylesheet" href="/assets/css/scholar-icons.css?62b2ac103a88034e6882a5be5f3e2772">
+<link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap">
+
+<!-- Code Syntax Highlighting -->
+<link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light">
+
+
+
+<!-- Styles -->
+
+
+
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
+
+<link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
+<link rel="canonical" href="http://localhost:4000/blog/2025/deep/">
+
+
+  <!-- Dark Mode -->
+  <script src="/assets/js/theme.js?a81d82887dd692e91686b43de4542f18"></script>
+  <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark">
+  <script>
+    initTheme();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+        <a class="navbar-brand title font-weight-lighter" href="/">
+          
+            
+              <span class="font-weight-bold">Zane</span>
+            
+            
+            Liao
+          
+        </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">about
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item active">
+                  <a class="nav-link" href="/blog/">blog
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/publications/">publications
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/projects/">projects
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/repositories/">repositories
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/cv/">cv
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/teaching/">teaching
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/people/">people
+                    
+                  </a>
+                </li>
+              
+            
+          
+            
+              
+                
+                
+                <li class="nav-item dropdown ">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">submenus
+                    
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    
+                      
+                        <a class="dropdown-item " href="/books/">bookshelf</a>
+                      
+                    
+                      
+                        <div class="dropdown-divider"></div>
+                      
+                    
+                      
+                        <a class="dropdown-item " href="/blog/">blog</a>
+                      
+                    
+                  </div>
+                </li>
+              
+            
+          
+          
+            <!-- Search -->
+            <li class="nav-item">
+              <button id="search-toggle" title="Search" onclick="openSearchModal()">
+                <span class="nav-link">ctrl k <i class="ti ti-search"></i></span>
+              </button>
+            </li>
+          
+          
+            <!-- Toogle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" title="Change theme">
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
+              </button>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  
+</header>
+
+
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        
+
+
+
+
+
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">Deep Learning</h1>
+    <p class="post-meta">
+      Created on September 26, 2025
+      
+      
+      
+    </p>
+    <p class="post-tags">
+      
+        <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>
+      
+      
+          ·  
+        
+          
+            <a href="/blog/tag/machine-learning"> <i class="fa-solid fa-hashtag fa-sm"></i> machine-learning</a>
+          
+          
+             
+          
+        
+          
+            <a href="/blog/tag/math"> <i class="fa-solid fa-hashtag fa-sm"></i> math</a>
+          
+          
+             
+          
+        
+          
+            <a href="/blog/tag/code"> <i class="fa-solid fa-hashtag fa-sm"></i> code</a>
+          
+          
+        
+      
+
+      
+          ·  
+        
+          
+            <a href="/blog/category/sample-posts"> <i class="fa-solid fa-tag fa-sm"></i> sample-posts</a>
+          
+          
+        
+      
+    </p>
+  </header>
+
+  <article class="post-content">
+    
+    <div id="markdown-content">
+      <h1 id="introduction-to-deep-learning">Introduction to Deep Learning</h1>
+
+<ul>
+  <li>Deep learning, a training method that combines computing power and data, has been widely used since the use of GPUs to train AlexNet on ImageNet in 2012.</li>
+  <li>We need to understand what deep learning is and how it differs from traditional machine learning.</li>
+  <li>Deep learning is a combination of deep neural networks and architecture = deep learning models.</li>
+  <li>Although deep learning is highly effective, its interpretability is poor and it is currently almost a black box.</li>
+  <li>Deep learning relies on the amount of data available. For real-world tasks, if data is insufficient, it is best not to use deep learning to train from scratch, as this will result in performance inferior to traditional machine learning algorithms. Choose the most suitable model based on the size and distribution of the dataset.</li>
+  <li>Deep learning is non-convex, meaning that we may not find the theoretical “global optimal solution.” In practice, trained networks often reach local optimal solutions, but local optimal solutions in deep neural networks often perform well.</li>
+  <li>The primary optimization algorithm in deep learning is backpropagation.</li>
+  <li>In terms of scale and number of layers, neural networks with more than one layer are theoretically called deep neural networks (DNNs). In practice, there is no clear distinction.</li>
+</ul>
+
+<h5 id="neural-network">Neural Network</h5>
+<ul>
+  <li>A neural network is a combination of linear transformation and activation function.</li>
+  <li>Formula: $\mathbf{h} = \sigma(W \mathbf{x} + b)$</li>
+  <li>Without an activation function, a multi-layer model degenerates into a single-layer linear model.</li>
+  <li>The key to success in deep learning: nonlinear activation functions + stacking.</li>
+  <li>Common activation functions include: Tanh, ReLU, Sigmoid, Softmax, etc.</li>
+  <li>Currently, the Pytorch framework is generally used as a launchpad for training models in the deep learning field, while the TensorFlow framework is gradually fading from mainstream use.</li>
+</ul>
+
+<h5 id="forward-propagation">Forward Propagation</h5>
+<ul>
+  <li>Forward propagation simply involves input (usually converted to a matrix) -&gt; linear transformation + activation function -&gt; output.</li>
+  <li>Forward propagation does not involve gradient updates or parameter updates. <bt></bt>
+</li>
+</ul>
+
+\[\begin{align*}
+z1 = W1x + b1 \\
+a1 = σ(z1) \\
+z2 = W2a1 + b2 \\
+ŷ = σ_{out}(z2)
+\end{align*}\]
+
+<h5 id="back-propagation">Back Propagation</h5>
+<ul>
+  <li>Backpropagation is the most important optimization algorithm in deep learning.</li>
+  <li>When training neural networks, we generally use the chain rule to calculate the gradient of the loss function with respect to the parameters to update the weights.</li>
+  <li>The calculation process is generally forward to obtain the output $ŷ$ -&gt; calculate the loss -&gt; calculate layer by layer -&gt; parameter update</li>
+  <li>Essence: propagate the error layer by layer and use gradient descent to optimize the parameters</li>
+  <li>Let’s take an example
+    <ol>
+      <li>Input Layer: $x$</li>
+      <li>Hidden Layer: $z^{[1]} = W^{[1]}x + b^{[1]}, \quad a^{[1]} = \sigma(z^{[1]})$</li>
+      <li>Output Layer: $z^{[2]} = W^{[2]}a^{[1]} + b^{[2]}, \quad \hat{y} = \sigma(z^{[2]})$</li>
+      <li>Loss Function: $L = \frac{1}{2}(y - \hat{y})^2$</li>
+    </ol>
+  </li>
+  <li>Back Propagation step:
+    <ol>
+      <li>Output Error: $\delta^{[2]} = \frac{\partial L}{\partial z^{[2]}} = (\hat{y} - y) \cdot \sigma’(z^{[2]})$</li>
+      <li>Hidden Error: $\delta^{[1]} = \frac{\partial L}{\partial z^{[1]}} = (W^{[2]})^T \delta^{[2]} \cdot \sigma’(z^{[1]})$</li>
+    </ol>
+  </li>
+  <li>Gradient Compute:
+    <ol>
+      <li>$\frac{\partial L}{\partial W^{[2]}} = \delta^{[2]} (a^{[1]})^T$</li>
+      <li>$\frac{\partial L}{\partial b^{[2]}} = \delta^{[2]}$</li>
+      <li>$\frac{\partial L}{\partial W^{[1]}} = \delta^{[1]} x^T$ $\frac{\partial L}{\partial b^{[1]}} = \delta^{[1]}$</li>
+    </ol>
+  </li>
+  <li>The specific details of backpropagation are not explained. We only need to know that the goal of the neural network is to minimize the loss function. Without the backpropagation algorithm, using other algorithms (such as numerical algorithms) requires a complexity of $O(n^2)$. With backpropagation, we can achieve the same complexity as forward propagation, $O(n)$.</li>
+  <li>Without backpropagation, it is difficult to train large-scale neural networks.</li>
+</ul>
+
+<h5 id="optimization-algorithms">Optimization Algorithms</h5>
+<ul>
+  <li>Gradient Descent (GD) uses all samples to update parameters each time. It is very inefficient when the amount of data is large.</li>
+  <li>Stochastic Gradient Descent (SGD) uses one sample to update parameters each time. It is fast to calculate and can jump out of the local optimum, but it has large fluctuations and is not easy to converge.</li>
+  <li>Mini-batch Gradient Descent uses a small batch of samples (batch) to update parameters each time. It is a compromise between efficiency and stability.</li>
+  <li>Momentum $v = βv + (1-β)∇L θ = θ - ηv$ simulates inertia, reduces oscillations, and accelerates convergence.</li>
+  <li>Adagrad uses adaptive learning rates to reduce frequent learning rate updates, but its drawback is that small learning rates can lead to premature stagnation.</li>
+  <li>RMSProp uses weighted averaging to improve the rapid decay of Adagrad’s learning rate.</li>
+  <li>Adam (Adaptive Moment Estimation) combines momentum with RMSProp and is the most commonly used optimizer.</li>
+  <li>AdamW introduces weight decay to Adam, resulting in more stable results and is a commonly used optimizer for LLM.</li>
+  <li>Others: AdaMax, Nadam, LAMB, MuonClip, etc.</li>
+</ul>
+
+<h5 id="regularization-methods">Regularization Methods</h5>
+<ul>
+  <li>Regularization methods are generally used to prevent model overfitting and improve robustness and generalization.</li>
+  <li>Regularization methods are generally categorized into L1 and L2, dropout, data augmentation, early stopping, batch normalization, and layer normalization.</li>
+  <li>L1 is Lasso, which makes the parameters sparse: \(\lambda\sum_{i} \lvert wi \rvert\)</li>
+  <li>L2 is Ridge, which makes weights smaller but not sparse: \(\lambda\sum_{i} \lvert wi \rvert\)</li>
+  <li>Dropout randomly drops neurons during training.</li>
+  <li>Data Augmentation modifies the model to make it more robust. Methods include rotation, translation, flipping, and adding noise.</li>
+  <li>Early Stopping monitors the loss and stops training if performance starts to decline.</li>
+  <li>Batch Normalization/Layer Normalization normalizes the outputs of intermediate layers to reduce exploding and vanishing gradients. A small amount of regularization is more like an optimization technique.</li>
+  <li>Why are Regularization Methods rarely used for training LLMs? LLMs require a very large amount of data and often suffer from underfitting. Furthermore, optimizers like the AdamW optimizer use a small amount of regularization and weight decay.</li>
+</ul>
+
+<h5 id="initialization-methods">Initialization Methods</h5>
+<ul>
+  <li>Keep the activations and gradient variances of each layer as stable as possible during forward and backward propagation to prevent vanishing and exploding gradients, making it easier to train deep networks.</li>
+  <li>Random Initialization: Both Gaussian and uniform distributions are acceptable.</li>
+  <li>Uniform: $W_{ij}\sim \mathcal{N}(0,\sigma^2)$</li>
+  <li>Gaussian: $W_{ij}\sim \mathcal{U}[-a,a] \mathrm{Var}=a^2/3$</li>
+  <li>He Initialization (Kaiming Initialization)</li>
+  <li>LeCun Initialization</li>
+  <li>Xavier Initialization (Glorot Initialization), etc.</li>
+</ul>
+
+<h5 id="convolutional-neural-networks-cnn">Convolutional Neural Networks (CNN)</h5>
+<ul>
+  <li>CNN is the core model for processing grid data such as <strong>images, videos, and speech</strong> in deep learning.</li>
+  <li>Compared to fully connected networks, it has fewer parameters and better preserves spatial structure.</li>
+  <li>Convolutional neural networks were proposed by Le. Their general layer architecture is: convolution layer + activation function + pooling layer + fully connected layer + normalization layer.</li>
+  <li>The convolution layer performs a local weighted sum on the input feature map using a convolution kernel (filter/kernel). <br>
+\(\begin{align*}y_{i,j,k} = \sum_{c=1}^{C} \sum_{m=1}^{M} \sum_{n=1}^{N} x_{i+m, j+n, c} \cdot w_{m,n,c,k}\end{align*}\)</li>
+  <li>Parameters: kernel size (M×N), stride, padding</li>
+  <li>Activation functions: ReLU, Leaky ReLU, GELU, etc., which increase nonlinearity and can learn complex parameters from the data</li>
+  <li>Pooling layers: MaxPooling / AveragePooling, which reduce image size and computational complexity</li>
+  <li>Fully connected layers: After convolutional feature extraction, fully connected layers perform regression or classification</li>
+  <li>Norm layers: Perform normalization, add block convergence, and alleviate vanishing gradients</li>
+  <li>CNN Architectures: LeNet, AlexNet, VGGNet, ResNet, DenseNet, GoogleNet, etc.</li>
+  <li>The most important CNN architecture is ResNet. By introducing residual connections, it solves the vanishing gradient problem in deep neural networks. Formula: $y = F(x, {W_i}) + x$</li>
+  <li>CNNs are generally used for image classification, object detection, semantic segmentation, medical image analysis, etc.</li>
+  <li>CNN-derived architectures and algorithms include U-Net and YOLO.</li>
+</ul>
+
+<h5 id="recurrent-neural-networks-rnn-gru-lstm">Recurrent Neural Networks (RNN, GRU, LSTM)</h5>
+<ul>
+  <li>These models are generally used for NLP, speech recognition, time series, video understanding, etc.
+    <h6 id="rnn">RNN</h6>
+  </li>
+  <li>RNN, also known as recurrent neural network, is a neural network used to process sequential data (text, time series, speech, etc.).</li>
+  <li>Main Idea: <strong>Hidden State</strong> acts as memory, transferring historical information to the next moment.</li>
+  <li>RNNs are prone to problems such as vanishing/exploding gradients.</li>
+  <li>Improvements: GRU (Gated Recurrent Unit) LSTM (Long Short-Term Memory Network)
+\(\text{Given $x_t$, Hidden state update: }\ h_t = \tanh(W_{xh} x_t + W_{hh} h_{t-1} + b_h)\)
+\(\text{Output: }\ y_t = W_{hy} h_t + b_y\)
+    <h6 id="gru">GRU</h6>
+  </li>
+  <li>Compared to RNNs, GRUs add <strong>memory cells (cell states)</strong> and <strong>gates</strong>, which effectively mitigate the vanishing/exploding gradient problem.</li>
+  <li>Can model long-term dependencies, but training is slow and requires a large number of parameters.</li>
+  <li>Input: $x_t$, Previous state: $h_{t-1}, c_{t-1}$</li>
+  <li>Input gate:
+\(i_t = \sigma(W_{xi} x_t + W_{hi} h_{t-1} + b_i)\)</li>
+  <li>Forget gate:
+\(f_t =\sigma(W_{xf} x_t + W_{hf} h_{t-1} + b_f)\)</li>
+  <li>Candidate Memory:
+\(\tilde{c}_t = \tanh(W_{xc} x_t + W_{hc} h_{t-1} + b_c)\)</li>
+  <li>State:
+\(c_t = f_t \odot c_{t-1} + i_t \odot \tilde{c}_t\)</li>
+  <li>Output Gate:
+\(o_t = \sigma(W_{xo} x_t + W_{ho} h_{t-1} + b_o)\)</li>
+  <li>Hidden State:
+\(h_t = o_t \odot \tanh(c_t)\)</li>
+</ul>
+
+<h6 id="lstm">LSTM</h6>
+<ul>
+  <li>Alleviating vanishing/exploding gradient issues in RNNs during training and capturing long-term dependencies</li>
+  <li>Main Idea: Introducing Additive Cells The state $c_t$ and the gate $(i,f,o)$ allow the gradient to flow along $c_t$ almost “unimpeded.”</li>
+  <li>A simple reference implementation
+\(\begin{bmatrix}
+i_t \\ f_t \\ g_t \\ o_t
+\end{bmatrix}
+=
+\begin{bmatrix}
+\sigma \\ \sigma \\ \tanh \\ \sigma
+\end{bmatrix}
+\left( W_x x_t + W_h h_{t-1} + b \right)\)</li>
+  <li>Update the state
+\(c_t = f_t \odot c_{t-1} + i_t \odot g_t\)
+\(h_t = o_t \odot \tanh(c_t)\)</li>
+  <li>$W_x \in \mathbb{R}^{4h \times d}$ , $W_h \in \mathbb{R}^{4h \times h}$, $b \in \mathbb{R}^{4h}$</li>
+</ul>
+
+<h5 id="self-supervised-learning">Self-Supervised Learning</h5>
+<ul>
+  <li>Before moving on to Transformers, we must first understand what self-supervised learning is.</li>
+  <li>Self-supervised learning (SSL) is a learning method that does not rely on human annotations.</li>
+  <li>Learning is achieved by constructing supervisory signals from the data itself.</li>
+  <li>SSL does not require human labels, but “pseudo-labels” are constructed during training.</li>
+  <li>SSL can be considered a combination of unsupervised and supervised learning.</li>
+  <li>Main idea: Design a pre-training task to construct “pseudo-labels,” for example, predicting masked words given a text sequence (BERT).</li>
+  <li>Representation Learning: Learn the feature space through these tasks.</li>
+  <li>Downstream tasks: Transfer the learned representations to tasks such as classification, regression, and generation.</li>
+  <li>Common methods:</li>
+  <li>Predictive SLL:</li>
+</ul>
+
+<ol>
+  <li>Masked Language Modeling (MLM, e.g., BERT)</li>
+  <li>Masked Autoencoder (MAE for vision)</li>
+  <li>Sequence Auto-regression (GPT)
+    <ul>
+      <li>Contrastive SSL:</li>
+    </ul>
+  </li>
+  <li>SimCLR, MoCo, BYOL, SimSiam
+    <ul>
+      <li>Generative SSL</li>
+    </ul>
+  </li>
+  <li>Autoencoder</li>
+  <li>Variational Autoencoder (VAE)</li>
+  <li>Diffusion-based SSL (e.g., Masked Diffusion Pretraining)</li>
+</ol>
+
+<ul>
+  <li>SimCLR (Chen et al., Google Research, 2020) is a self-supervised contrastive learning method that does not rely on labels and learns representations by maximizing the consistency of different augmented views.</li>
+  <li>InfoNCE Loss is: <br>
+</li>
+</ul>
+
+\[\begin{align*}
+L_{\text{pre}}(\theta) = - \sum_{i=1}^{B} \log
+\frac{\exp \left( \phi_{\theta}(\hat{x}^{(i)})^{\top} \phi_{\theta}(\tilde{x}^{(i)}) \right)}
+{\exp \left( \phi_{\theta}(\hat{x}^{(i)})^{\top} \phi_{\theta}(\tilde{x}^{(i)}) \right)
++ \sum_{j \neq i} \exp \left( \phi_{\theta}(\hat{x}^{(i)})^{\top} \phi_{\theta}(\tilde{x}^{(j)}) \right)}
+\end{align*}\]
+
+<h5 id="transformer">Transformer</h5>
+<ul>
+  <li>As one of the most important model architectures in recent years, the Transformer has demonstrated excellent performance in tasks such as NLP, Computer Vision, and speech. This is especially true for the Generative Prediction (GPT) architecture derived from the Transformer.</li>
+  <li>I won’t go into detail about the Transformer architecture; there are excellent resources online <a href="https://stanford-cs336.github.io/spring2025/" rel="external nofollow noopener" target="_blank">cs336</a>
+</li>
+  <li>In the 2017 Transformer paper, the core architecture is (Encoder+Decoder)</li>
+  <li>The core is Self-Attention+FFN+Residual+Norm</li>
+  <li>The Encoder extracts contextual information, and the Decoder autoregressively predicts the sequence.</li>
+  <li>The core of Attention:
+\(\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V\)</li>
+  <li>Modern LLMs are all decoder-only architectures, eliminating the original encoder and simplifying them to autoregressive language models.</li>
+  <li>As of August 2025, the typical combination of modern LLM architectures is RMSNorm+RoPE+FFN(SwiGLU)</li>
+  <li>LayerNorm+Learned has been replaced. Embedding + FFN (ReLU/GeLU)</li>
+  <li>Attention variants include new architectures like FlashAttention that optimize I/O and accelerate computation.</li>
+  <li>For a detailed introduction, see the CS336 lecture notes.</li>
+  <li>MoE (Mixture of Experts) architecture: Multiple FFN blocks are run in parallel, but only k experts are activated at a time.
+\(y = \sum_{i \in \text{TopK}(G(x))} g_i(x) \cdot E_i(x)\)</li>
+  <li>$E_i$ Experts(FFN)</li>
+  <li>$G(x)$ Gating network, determines which expert to route to</li>
+  <li>
+    <p>$g_i(x)$ Experts’ weights</p>
+  </li>
+  <li>Multimodal Transformer: Language + Vision + Audio + Code → Multimodal</li>
+  <li>Common architectures include single-tower, dual-tower, LLM + Adapter, and foundation multimodal LLM.</li>
+</ul>
+
+<h5 id="mamba">Mamba</h5>
+<ul>
+  <li>A major success of the Transformer is its ability to parallelize and distribute computations, significantly improving training and inference efficiency. However, a drawback is that computational efficiency degrades when dealing with extremely long sequences, with a time complexity of $O(L^2 \cdot d)$. It also consumes a lot of memory, which is why LLMs require large amounts of video memory and RAM, and are very I/O-intensive.</li>
+  <li>The Mamba architecture is based on the Structured State Space Model (SSM).</li>
+  <li>Its core lies in the introduction of the Selective State Space (SSS), which enables modeling of long sequences.</li>
+  <li>Its time complexity is $O(L \cdot d)$.</li>
+  <li>For details on the Mamba model, please refer to <a href="https://arxiv.org/abs/2312.00752" rel="external nofollow noopener" target="_blank">Mamba</a>.</li>
+</ul>
+
+<h5 id="deep-generative-models">Deep Generative Models</h5>
+<ul>
+  <li>What is a Deep Generative Model?</li>
+  <li>It learns the probability distribution $P(x)$ or conditional distribution $P(x \mid y)$ of the data and generates new samples similar to the training data.</li>
+  <li>Autoregressive Models, Energy-Based Models (EBM)</li>
+  <li>Image Generation: GAN, VAE, Diffusion Model</li>
+  <li>Text Generation (GPT Series)</li>
+  <li>Data Augmentation and Simulation</li>
+  <li>I know very little about deep generative models, but if you want to delve deeper, the best resources and lecture notes are <a href="https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8" rel="external nofollow noopener" target="_blank">cs236</a> and <a href="https://cs231n.stanford.edu/" rel="external nofollow noopener" target="_blank">cs231n</a>
+</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2011.54.48.png" width="1000" height="600">
+</p>
+
+<h5 id="gan">GAN</h5>
+<ul>
+  <li>Training Two Networks—Generator $G$ and Discriminator $D$</li>
+  <li>Goal:
+\(\min_G \max_D \mathbb{E}_{x \sim p_\text{data}}[\log D(x)] + \mathbb{E}_{z \sim p_z}[\log (1 - D(G(z)))]\)</li>
+  <li>GAN variants include CD-GAN and Style-GAN. The difficulty in training GANs lies in the balance between the generator and the discriminator.</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2014.33.21.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2014.59.47.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2014.59.58.png" width="1000" height="400">
+</p>
+<ul>
+  <li>Training Step</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2015.04.58.png" width="1000" height="600">
+</p>
+<ul>
+  <li>Some Questions with the Training Model</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2015.49.13.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2015.49.00.png" width="1000" height="600">
+</p>
+
+<h5 id="vae">VAE</h5>
+<ul>
+  <li>Maps data to a latent space $z$ and then reconstructs data from the latent space</li>
+  <li>Encoder: $q_\phi(z \mid x)$</li>
+  <li>Decoder: $p_\theta(x \mid z)$</li>
+  <li>Goal (ELBO):
+\(\mathcal{L}(\theta, \phi; x) = \mathbb{E}_{q_\phi(z \mid x)}[\log p_\theta(x \mid z)] - \text{KL}(q_\phi(z \mid x) \| p(z))\)</li>
+  <li>One of the best lectures on this topic is <a href="https://www.youtube.com/watch?v=zbHXQRUNlH0&amp;list=PLoROMvodv4rOmsNzYBMe0gJY2XS8AQg16&amp;index=13" rel="external nofollow noopener" target="_blank">cs231n</a>
+</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-19%20at%2022.38.29.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-19%20at%2022.38.40.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-19%20at%2022.38.05.png" width="1000" height="800">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-19%20at%2022.37.49.png" width="1000" height="600">
+</p>
+
+<h5 id="diffusion-model">Diffusion Model</h5>
+<ul>
+  <li>Generates samples by gradually adding noise to the data and then learning the inverse process of removing the noise.</li>
+  <li>Diffusion This model is also useful for generating text code for NLP. Some progress has been made. For details, please refer to the Google paper.</li>
+  <li>Forward (+noise): $q(x_t \mid x_{t-1})$</li>
+  <li>Backward (-noise): Learning $p_\theta(x_{t-1} \mid x_t)$</li>
+  <li>Goal (ELBO)
+\(\mathcal{L}_{\text{ELBO}} = \mathbb{E} \Big[ \sum_{t=1}^T D_{KL}(q(x_t \mid x_{t-1}) \| p_\theta(x_{t-1} \mid x_t)) \Big]\)</li>
+  <li>Diffusion models are a complex class of models. According to the instructor of cs231n, there are three different mathematical formulations for derivation.derivation and notation, and a 5-page derivation</li>
+  <li><a href="https://lilianweng.github.io/posts/2021-07-11-diffusion-models/" rel="external nofollow noopener" target="_blank">Lilian weng’s blog</a></li>
+  <li>
+<a href="https://sander.ai/2023/07/20/perspectives.html" rel="external nofollow noopener" target="_blank">Sander Dielman’s blog</a>
+-Some Paper:
+    <ol>
+      <li><a href="https://arxiv.org/pdf/1503.03585" rel="external nofollow noopener" target="_blank">Deep Unsupervised Learning using Nonequilibrium Thermodynamics</a></li>
+      <li><a href="https://arxiv.org/pdf/2006.11239" rel="external nofollow noopener" target="_blank">Denoising Diffusion Probabilistic Models</a></li>
+      <li><a href="https://arxiv.org/pdf/2011.13456" rel="external nofollow noopener" target="_blank">SCORE-BASED GENERATIVE MODELING THROUGH STOCHASTIC DIFFERENTIAL EQUATIONS</a></li>
+    </ol>
+  </li>
+  <li>High-level Overview</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2016.42.47.png" width="1000" height="600">
+</p>
+<ul>
+  <li>Intuitively, rectified flow models are a type of diffusion model.</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Pasted%20image%2020250920183611.png" width="1000" height="800">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2018.01.57.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2018.02.04.png" width="1000" height="400">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2018.54.21.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2018.54.50.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2018.55.06.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2019.33.50.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2019.32.49.png" width="1000" height="400">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2019.37.12.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2019.37.26.png" width="1000" height="600">
+</p>
+<ul>
+  <li>Modern Diffusion Model The most common one is Latent Diffusion Model (LDM) is essentially a combination of VAE, GAN, and Diffusion. Why? Because using modern diffusion models for tasks requires high-quality, well-generated data, which is the advantage of GANs. They can quickly generate latent spaces, which is the advantage of VAEs.</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2020.21.40.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2020.21.53.png" width="1000" height="600">
+</p>
+<h5 id="diffusion-transformer">Diffusion transformer</h5>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2020.27.25.png" width="1000" height="600">
+</p>
+<ul>
+  <li>Some examples</li>
+</ul>
+<p align="center">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2020.32.08.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2020.32.19.png" width="1000" height="600">
+  <img src="/assets/photos/cs231n/Screenshot%202025-09-20%20at%2020.40.29.png" width="1000" height="600">
+</p>
+
+<p>…For details, please see cs231n Lecture 14.</p>
+
+<h5 id="llm-inference">LLM Inference</h5>
+<ul>
+  <li>We typically use Softmax to determine the probability of each token in the vocabulary, select the one with the highest probability (greedy search) and output it (using Tokenizer decode() to decode the token ID into a token). This token ID is then fed back into the model to predict the next token, looping until $<eos>$ is generated or the maximum length is reached (the maximum number of tokens output is typically set in config.yaml, for example, 2048 tokens). This step is typically called autoregression.</eos>
+</li>
+  <li>If the maximum number of tokens output is not set, issues such as increased latency, increased GPU memory usage, and duplicate model output can occur.</li>
+  <li>For multimodal LMs, such as images, the output tokens are typically latent codes, which are converted back to pixel images by the Decoder.</li>
+  <li>The vector dimensions of visual and textual tokens must be consistent to be able to be placed in the same Transformer.</li>
+  <li>To speed up inference, we typically use a KV Cache.</li>
+  <li>The core of the KV Cache technique is to store the key-value pairs (KVs) calculated after each attention layer is computed. This saved KV is then used each time the model is inferred, rather than recalculating the previous KVs. Cache:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cache</span><span class="p">[</span><span class="n">layer</span><span class="p">].</span><span class="n">k</span> <span class="o">=</span> <span class="p">[</span><span class="n">k1</span><span class="p">,</span> <span class="n">k_k_new</span><span class="p">]</span>
+<span class="n">cache</span><span class="p">[</span><span class="n">layer</span><span class="p">].</span><span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="n">v1</span><span class="p">,</span> <span class="n">v_new</span><span class="p">]</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Without using a KV cache, the time complexity is $O(N^{2} \cdot d)$. With a KV cache, the time complexity is reduced to $O(N \cdot d)$.</li>
+  <li>We typically use open-source libraries for LM output (HuggingFace Transformer, Ollama, etc.). This allows for generating a token and immediately returning it to the front-end interface or CLI. We call this step token-by-token streaming.</li>
+  <li>vLLM=&gt;very fast LLM. This is an open-source inference engine specifically designed for LLM inference acceleration, supporting multi-user and high-concurrency scenarios. Its core technology is PageAttention, which addresses the problems of traditional KV caches: video memory fragmentation and memory waste. vLLM stores the KV cache as pages, rather than arrays. We can think of it as KV The cache implements “Virtual Memory” to support high concurrency. Compared to traditional one-shot batching, it can be interleaved, resulting in significantly higher concurrent throughput.</li>
+  <li>From a time complexity perspective, for an autoregressive model, the total complexity is $O(L \cdot N^{3} \cdot d)$, where L is the number of layers, N is the input sequence length, and d is the hidden dimension. Using only the KV Cache reduces the complexity to $O(L \cdot N^{2} \cdot d)$. Adding vLLM significantly reduces memory usage, while maintaining the overall complexity. Because P « N, vLLM only caches active pages, resulting in a memory usage of $P \times L \times d$, rather than the previous $N \times L \times d$.</li>
+</ul>
+
+    </div>
+  </article>
+
+  
+
+  
+
+  
+    
+      
+
+  
+    
+    
+      <br>
+      <hr>
+      <br>
+      <ul class="list-disc pl-8"></ul>
+
+      <!-- Adds related posts to the end of an article -->
+      <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
+    
+
+    <p class="mb-2">Here are some more articles you might like to read next:</p>
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/" target="_blank" rel="external nofollow noopener">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a>
+      <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2" target="_blank" rel="external nofollow noopener">Displaying External Posts on Your al-folio Blog</a>
+      <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/policy/">Policy Gradient</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/sul/">Supervised Learning</a>
+    
+  </li>
+
+  
+
+  <li class="my-2">
+    
+      <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2025/bs/">Black-Scholes Model</a>
+    
+  </li>
+
+
+
+    
+  
+
+  
+  
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      
+  © Copyright 2025
+  Zane
+  
+  Liao. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
+
+  
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<!-- Bootsrap & MDB scripts -->
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+
+  <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/masonry.js?a0db7e5d5c70cc3252b3138b0c91dcaf" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Medium Zoom JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
+  <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script>
+
+
+
+
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script>
+<script defer src="/assets/js/common.js?c15de51d4bb57887caa2c21988d97279"></script>
+<script defer src="/assets/js/copy_code.js?c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script>
+
+<!-- Jupyter Open External Links New Tab -->
+<script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script>
+
+<!-- Badges -->
+
+  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+  <script async src="https://badge.dimensions.ai/badge.js"></script>
+
+
+
+  <!-- MathJax -->
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script>
+  
+    <script src="/assets/js/mathjax-setup.js?a5bb4e6a542c546dd929b24b8b236dfd"></script>
+    <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+  <!-- Scrolling Progress Bar -->
+  <script defer src="/assets/js/progress-bar.js?2f30e0e6801ea8f5036fa66e1ab0a71a" type="text/javascript"></script>
+
+
+
+
+
+
+
+  <!-- Back to Top -->
+  <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script>
+  <script>
+    addBackToTop();
+  </script>
+
+
+
+  <!-- Search -->
+  <script type="module" src="/assets/js/search/ninja-keys.min.js?a3446f084dcaecc5f75aa1757d087dcf"></script>
+  <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys>
+  <script src="/assets/js/search-setup.js?6c304f7b1992d4b60f7a07956e52f04a"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script src="/assets/js/shortcut-key.js?6f508d74becd347268a7f822bca7309d"></script>
+
+
+
+
+  </body>
+</html>
