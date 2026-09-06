@@ -1,152 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeonByte Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zane Liao 的个人网站，记录独立开发、Swift 与产品构建。">
+  <meta name="theme-color" content="#080b12">
+  <link rel="canonical" href="https://zane-liao.github.io/">
+  <title>Zane Liao — 独立开发者</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||'dark';</script>
 </head>
 <body>
-  <!-- Loading Screen -->
-  <div id="loading">
-    <div class="scanner">
-      <div class="scan-line"></div>
-    </div>
-    <div class="loading-text">SYSTEM INITIALIZING...</div>
-  </div>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div class="ambient" aria-hidden="true"></div>
 
-  <!-- Background Elements -->
-  <div class="cyberpunk-background">
-    <div class="punk-bg"></div>
-    <div class="grid"></div>
-    <div class="glitch-overlay"></div>
-    <div class="neon-particles"></div>
-  </div>
-  
-  <!-- Floating Face Element -->
-  <div class="floating-face">
-    <div class="face-container">
-      <img src="/assets/images/face.png" alt="Floating Face">
-      <div class="face-glow"></div>
-    </div>
-    <div class="face-particle-container"></div>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="cyber-nav">
-    <div class="logo">
-      <span class="neon-text">NEON</span><span class="cyber-text">BYTE</span>
-    </div>
-    <div class="nav-links">
-      <a href="#home" class="nav-link" data-text="HOME">HOME</a>
-      <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
-      <a href="#blog" class="nav-link" data-text="BLOG">BLOG</a>
-      <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
-    </div>
-    <div class="nav-controls">
-      <button id="toggleMode" class="cyber-button"><i class="fas fa-lightbulb"></i><span>切换主题</span></button>
-    </div>
-  </nav>
-
-  <!-- Main Header -->
-  <header id="home">
-    <div class="container">
-      <div class="profile-container">
-        <div class="profile-picture">
-          <img src="/assets/images/NPC.jpeg" alt="Zane Liao">
-          <div class="profile-glow"></div>
-        </div>
-        <div class="header-text">
-          <h1 class="glitch" data-text="ZANE LIAO">ZANE LIAO</h1>
-          <div class="console-container">
-            <span id="console-text"></span><span class="console-cursor">_</span>
-          </div>
-        </div>
-      </div>
-      <div class="header-decoration">
-        <div class="neon-bar"></div>
-        <div class="neon-bar"></div>
-        <div class="neon-bar"></div>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Zane Liao 首页">
+        <span class="brand-mark">ZL</span>
+        <span>Zane Liao</span>
+      </a>
+      <nav class="nav-links" id="site-nav" aria-label="主要导航">
+        <a href="#work">项目</a>
+        <a href="#writing">文章</a>
+        <a href="#about">关于</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="切换颜色主题">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+        <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- About Section -->
-    <section id="about" class="cyber-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="cyber-heading">关于我<span class="blink">_</span></h2>
-          <div class="cyber-decoration"></div>
+  <main id="main">
+    <section class="hero section" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Independent developer · Shanghai</p>
+        <h1>把想法做成<br><span>真正能用的产品。</span></h1>
+        <p class="hero-lede">你好，我是 Zane。我关注 Apple 平台、系统工具与 AI，持续记录从想法、设计到上线的完整过程。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">查看项目 <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="mailto:lzq666amn@gmail.com">联系我</a>
         </div>
-        <div class="about-content">
-          <div class="about-text">
-            <p class="cyber-text">👋 大家好！我的想法是学习计算机科学，之后做独立开发，最终目标是创业和实现自己的想法。</p>
-            <div class="tech-stack">
-              <span class="tech-badge">Swift</span>
-              <span class="tech-badge">Rust</span>
-              <span class="tech-badge">C++</span>
-              <span class="tech-badge">Python</span>
-              <span class="tech-badge">Algorithms</span>
-            </div>
-          </div>
+      </div>
+      <div class="signal-card reveal" aria-label="当前状态">
+        <div class="signal-top"><span>NOW BUILDING</span><span class="live-label">LIVE</span></div>
+        <div class="signal-orbit" aria-hidden="true"><span></span><span></span><span></span><b>01</b></div>
+        <div class="signal-copy">
+          <p class="signal-title">CleanMyIPhone</p>
+          <p>本地优先的 iPhone 空间整理与媒体工具。</p>
         </div>
       </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="cyber-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="cyber-heading">博客<span class="blink">_</span></h2>
-          <div class="cyber-decoration"></div>
+    <section class="section" id="work">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Selected work</p><h2>正在构建</h2></div>
+        <p>从真实需求出发，做小而完整的产品。</p>
+      </div>
+      <article class="project-card reveal">
+        <div class="project-index">01</div>
+        <div class="project-body">
+          <div class="project-meta"><span>iOS Utility</span><span>In development</span></div>
+          <h3>CleanMyIPhone</h3>
+          <p>帮助用户查看、整理和转换设备上的照片、视频与文件。核心处理留在设备本地，隐私不是附加功能，而是产品设计的一部分。</p>
+          <ul class="tag-list" aria-label="使用技术">
+            <li>SwiftUI</li><li>Photos</li><li>StoreKit</li><li>On-device</li>
+          </ul>
+          <div class="project-links">
+            <a href="cleanmyiphone/privacy/">隐私政策 <span aria-hidden="true">↗</span></a>
+            <a href="cleanmyiphone/terms/">服务条款 <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="blog-grid" id="blog-posts">
-          <!-- 博客文章将通过JavaScript动态加载 -->
+        <div class="project-visual" aria-hidden="true">
+          <div class="phone-frame"><div class="phone-island"></div><div class="storage-ring"><span>LOCAL</span></div><div class="phone-bars"><i></i><i></i><i></i></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="writing">
+      <div class="section-heading reveal">
+        <div><p class="eyebrow">Notes & process</p><h2>最近文章</h2></div>
+        <p>关于独立开发、产品判断与技术实践。</p>
+      </div>
+      <div class="article-list">
+        <a class="article-row reveal" href="posts/independent-development.html">
+          <time datetime="2025-03-30">2025.03.30</time>
+          <div><h3>从 0 到 1 的独立开发者之路</h3><p>记录 App idea，以及关于产品、市场和独立开发的一些思考。</p></div>
+          <span class="article-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-grid reveal">
+        <div><p class="eyebrow">About</p><h2>学习、构建、发布，<br>然后继续迭代。</h2></div>
+        <div class="about-copy">
+          <p>我正在学习计算机科学并实践独立开发，希望通过持续做产品，把技术能力转化为真实价值。</p>
+          <p>目前主要使用 Swift、Rust、C++ 和 Python，也持续研究算法、产品设计和创业。</p>
+          <div class="skill-line"><span>Swift</span><span>Rust</span><span>C++</span><span>Python</span><span>Algorithms</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="cyber-section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="cyber-heading">联系方式<span class="blink">_</span></h2>
-          <div class="cyber-decoration"></div>
-        </div>
-        <div class="contact-content">
-          <div class="social-links">
-            <a href="https://github.com/Zane-Liao" class="social-link" target="_blank">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="mailto:lzq666amn@gmail.com" class="social-link">
-              <i class="fas fa-envelope"></i>
-              <span>Email</span>
-            </a>
-          </div>
-        </div>
+    <section class="contact section reveal" id="contact">
+      <p class="eyebrow">Let’s connect</p>
+      <h2>有想法？一起聊聊。</h2>
+      <div class="contact-links">
+        <a href="mailto:lzq666amn@gmail.com">Email <span>↗</span></a>
+        <a href="https://github.com/Zane-Liao" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-text">
-          <p>&copy; 2025 NeonByte Blog. All rights reserved.</p>
-          <p class="cyber-small">以<span class="neon-text">Zane-Liao</span>实现</p>
-        </div>
-        <div class="footer-decoration">
-          <div class="neon-line"></div>
-        </div>
-      </div>
-    </div>
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Zane Liao</p>
+    <p>Designed and built in Shanghai.</p>
   </footer>
 
   <script src="script.js"></script>

@@ -1,80 +1,87 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>从0到1的独立开发之路 - NeonByte Blog</title>
-  <link rel="stylesheet" href="../css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="关于独立开发、产品方向和从想法走向上线的思考。">
+  <meta name="theme-color" content="#080b12">
+  <link rel="canonical" href="https://zane-liao.github.io/posts/independent-development.html">
+  <title>从 0 到 1 的独立开发者之路 — Zane Liao</title>
+  <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="../css/posts.css">
+  <script>document.documentElement.dataset.theme=localStorage.getItem('theme')||'dark';</script>
 </head>
 <body class="post-page">
-  <article class="full-post">
-    <header class="post-header">
-      <h1 class="post-title">从0到1的独立开发之路</h1>
-      <div class="post-meta">
-        <span class="post-date">06.22.2024</span>
-        <div class="post-tags">
-          <span class="tag">AI</span>
-          <span class="tag">创业</span>
-          <span class="tag">教育</span>
-        </div>
+  <a class="skip-link" href="#article">跳到正文</a>
+  <div class="ambient" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="../"><span class="brand-mark">ZL</span><span>Zane Liao</span></a>
+      <nav class="nav-links" id="site-nav" aria-label="主要导航">
+        <a href="../#work">项目</a><a href="../#writing">文章</a><a href="../#about">关于</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="切换颜色主题"><span aria-hidden="true">◐</span></button>
+        <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
       </div>
-    </header>
-    <div class="post-content">
-      <h2>如何从0到1做独立开发</h2>
-      <p>独立开发是一条充满挑战但也极具回报的道路。作为一名独立开发者，你需要同时扮演产品经理、设计师、开发者和营销人员的角色。</p>
-      
-      <h2>ToB与ToC的区别</h2>
-      <p><strong>ToB (Business to Business)</strong>: 面向企业和专业用户的产品服务，通常有更高的客单价，但销售周期长，决策链复杂。</p>
-      <p><strong>ToC (Business to Customer)</strong>: 面向普罗大众的产品服务，用户获取成本低，但需要大量用户才能形成规模效应。</p>
-      
-      <h2>独立开发的策略</h2>
-      <p>我的一些Idea有：</p>
-      <ul class="cyber-list">
-        <li>寻找小众群体，精准做产品和软件，寻找有潜在价值的客户。<br>难度：✨✨✨ 时间：✨✨✨ 收益：✨✨✨✨</li>
-        <li>了解大家的需求，快速迭代，快速开发，快速上线。<br>难度：✨✨ 时间：✨✨ 收益：✨✨</li>
-      </ul>
-      
-      <p><strong>综合策略</strong>：先主攻ToC服务，快速做出demo和产品，快速去反馈情况，然后打磨和营销，寻找用户，再推出ToB定制版服务。</p>
-      
-      <h2>我的项目：小智玩AI</h2>
-      <p>我有一个idea，名叫"小智玩AI"，这个软件是一款教育类产品。对于中国市场来说，教育是为数不多人们愿意去花精力花钱去消费的一款服务。</p>
-      
-      <p>产品特点：</p>
-      <ul class="cyber-list">
-        <li>分为幼儿版、青少年版和成人版</li>
-        <li>通过游戏卡片式交互学习AI</li>
-        <li>内部接入LLM、AI游戏、AI应用和科普</li>
-        <li>类似Duolingo的学习体验</li>
-      </ul>
-      
-      <h2>为什么需要了解AI</h2>
-      <p>我可以做一项深度绑定：为什么我们需要去了解AI，了解AI的人和不了解AI的人有什么差别。在未来对于个人成长经历有重要作用，从历史经验(驾马车拉夫和出租车司机)、学术界的统计、社会主流的声音来看，AI将深刻改变社会。</p>
-      
-      <h2>产品核心价值</h2>
-      <p>关于产品，我的认知是实用主义，不搞无用的花哨，主要在于教育和科普。用户从产品中能获得实际价值，解决用户的实际痛点。</p>
-      
-      <p>小智玩AI核心定义：<strong>以游戏和用户交互式来学习AI</strong>，UI简洁，注重深度交互，让用户真正能在产品中去体验。</p>
-      
-      <h2>市场需求分析</h2>
-      <p>为什么做这款产品：我看见了市场上对于如何普及AI这种，有很大的代差，产品参差不齐。大家对于AI只是一种概念上的浅度认知，不知道真正的AI是什么，有什么功能，科幻小说和电影中出现的有什么不一样的地方，大家如何去使用它，它到底能对我们的社会产生什么样的影响。</p>
-      
-      <h2>实现路径</h2>
-      <p>技术选择:</p>
-      <ul class="cyber-list">
-        <li>技术栈：SwiftUI原生开发，暂不使用跨平台框架</li>
-        <li>目标用户：Apple Store用户</li>
-        <li>语言：中文和英文</li>
-        <li>上架范围：Apple Store</li>
-        <li>费用模式：基础版免费，后续上线完整和高级版本，采用购买制和订阅制</li>
-      </ul>
-      
-      <p>实现步骤：快速做一个demo上线，先不分不同的版本，收集用户反馈后再迭代完善。</p>
     </div>
-    
-    <div class="post-navigation">
-      <a href="../index.html" class="cyber-button"><i class="fas fa-arrow-left"></i><span>返回首页</span></a>
-    </div>
-  </article>
+  </header>
+
+  <main class="post-shell" id="article">
+    <a class="back-link" href="../#writing"><span aria-hidden="true">←</span> 返回文章列表</a>
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">Independent development</p>
+        <h1>从 0 到 1 的<br>独立开发者之路</h1>
+        <p class="article-intro">记录一个产品想法，以及我对独立开发、市场判断和快速验证的阶段性思考。</p>
+        <div class="article-meta"><time datetime="2025-03-30">2025 年 3 月 30 日</time><span>约 6 分钟阅读</span></div>
+      </header>
+
+      <div class="post-content">
+        <h2>如何从 0 到 1 做独立开发</h2>
+        <p>独立开发是一条充满挑战、但也极具回报的道路。作为一名独立开发者，需要同时承担产品、设计、开发和营销等不同角色。</p>
+
+        <h2>ToB 与 ToC 的区别</h2>
+        <p><strong>ToB（Business to Business）</strong>面向企业和专业用户，通常客单价更高，但销售周期较长，决策链也更复杂。</p>
+        <p><strong>ToC（Business to Consumer）</strong>面向大众用户，产品能够更快触达市场，但通常需要更大的用户规模才能形成稳定收益。</p>
+
+        <h2>独立开发的策略</h2>
+        <p>我目前关注两种路径：</p>
+        <ul>
+          <li><strong>服务明确的小众群体：</strong>精准理解需求，制作能够持续创造价值的软件。</li>
+          <li><strong>快速开发和上线：</strong>尽早交付可用版本，通过真实反馈决定下一步，而不是闭门完善。</li>
+        </ul>
+        <blockquote>先从 ToC 产品出发，快速做出原型并获得反馈；当需求足够明确时，再探索面向专业用户或企业的版本。</blockquote>
+
+        <h2>一个产品想法：小智玩 AI</h2>
+        <p>“小智玩 AI”是一个教育产品设想，希望让不同年龄段的用户通过互动和游戏理解 AI，而不只是记住抽象概念。</p>
+        <ul>
+          <li>针对幼儿、青少年和成人提供不同内容层级</li>
+          <li>通过游戏与卡片式交互降低学习门槛</li>
+          <li>整合语言模型、AI 小应用和基础科普</li>
+          <li>以持续反馈建立接近语言学习产品的体验</li>
+        </ul>
+
+        <h2>为什么需要了解 AI</h2>
+        <p>AI 正在改变个人学习、工作和创造的方式。真正理解它的人，不仅知道如何调用一个工具，也更容易判断技术的边界、风险和适合自己的使用方式。</p>
+
+        <h2>产品的核心价值</h2>
+        <p>我的产品观偏向实用主义：界面和技术应该服务于真实问题，而不是为了展示复杂度。对于教育产品，用户最终获得的理解与能力，比功能数量更重要。</p>
+        <p>因此，“小智玩 AI”的核心定义是：<strong>通过游戏和深度交互学习 AI</strong>。</p>
+
+        <h2>实现路径</h2>
+        <ul>
+          <li><strong>技术：</strong>使用 SwiftUI 进行原生开发</li>
+          <li><strong>平台：</strong>优先面向 Apple 平台用户</li>
+          <li><strong>语言：</strong>支持中文和英文</li>
+          <li><strong>商业模式：</strong>基础体验免费，再根据反馈探索买断或订阅</li>
+        </ul>
+        <p>第一步不是完成所有设想，而是快速做出可以被使用的版本。上线、观察和迭代，比长时间停留在想法阶段更重要。</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>© <span id="year">2026</span> Zane Liao</p><p>持续学习，持续构建。</p></footer>
+  <script src="../script.js"></script>
 </body>
-</html> 
+</html>
