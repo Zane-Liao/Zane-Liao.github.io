@@ -28,8 +28,12 @@
     'zh-CN':['从 0 到 1 的独立开发者之路','记录想法，以及关于产品、市场和独立开发的一些思考。'],
     'zh-TW':['從 0 到 1 的獨立開發者之路','記錄想法，以及關於產品、市場和獨立開發的一些思考。']
   };
+  const appLabels = {
+    en:'App Information', fr:'Informations sur l’app', es:'Información de la app',
+    ja:'アプリ情報', ko:'앱 정보', 'zh-CN':'App 信息', 'zh-TW':'App 資訊'
+  };
   const apply = (lang) => {
-    const dict = {...(home[lang] || home.en),articleTitle:article[lang][0],articleSummary:article[lang][1]};
+    const dict = {...(home[lang] || home.en),articleTitle:article[lang][0],articleSummary:article[lang][1],appMarketing:appLabels[lang]};
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach((node) => { if (dict[node.dataset.i18n]) node.textContent = dict[node.dataset.i18n]; });
     document.querySelectorAll('[data-i18n-aria]').forEach((node) => { if (dict[node.dataset.i18nAria]) node.setAttribute('aria-label', dict[node.dataset.i18nAria]); });
