@@ -32,6 +32,42 @@ h2 { margin:2.8rem 0 .8rem; font-size:clamp(1.3rem,3vw,1.7rem); }
 .legal-footer { margin-top:42px; padding:26px 0; display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
 .legal-footer nav { display:flex; gap:18px; }
 .legal-footer a:hover { color:var(--accent); }
+.marketing-shell { width:min(calc(100% - 32px),1080px); margin:auto; }
+.marketing-hero { min-height:calc(100vh - 68px); display:grid; grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr); align-items:center; gap:clamp(44px,9vw,120px); padding:80px 0; }
+.marketing-hero h1 { max-width:780px; font-size:clamp(3.4rem,8vw,7rem); }
+.marketing-hero h1 span { color:transparent; -webkit-text-stroke:1px color-mix(in srgb,var(--text) 55%,transparent); }
+.marketing-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
+.marketing-button { min-height:48px; padding:0 19px; display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:12px; background:var(--surface); font-weight:700; text-decoration:none; }
+.marketing-button.primary { color:#071015; background:var(--accent); border-color:transparent; }
+.marketing-symbol { position:relative; width:min(100%,340px); aspect-ratio:1; display:grid; place-items:center; justify-self:center; }
+.marketing-symbol span { position:absolute; inset:0; border:1px solid var(--line); border-radius:50%; }
+.marketing-symbol span:nth-child(2) { inset:55px; border-color:var(--accent); border-style:dashed; }
+.marketing-symbol b { color:var(--accent); font:300 clamp(3rem,7vw,5rem)/1 ui-monospace,monospace; }
+.marketing-grid { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid var(--line); border-radius:22px; overflow:hidden; background:var(--surface); }
+.marketing-grid article { min-height:260px; padding:38px; border-right:1px solid var(--line); }
+.marketing-grid article:last-child { border-right:0; }
+.marketing-grid article small { color:var(--accent); font:700 12px/1 ui-monospace,monospace; }
+.marketing-grid h2 { margin-top:70px; font-size:1.7rem; }
+.marketing-grid p,.marketing-statement>p:last-child { color:var(--muted); }
+.experience-section { padding:130px 0; border-bottom:1px solid var(--line); }
+.experience-heading { max-width:760px; }
+.experience-heading h2 { margin:0; font-size:clamp(2.5rem,6vw,5rem); }
+.experience-steps { margin:62px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; list-style:none; counter-reset:steps; }
+.experience-steps li { min-height:210px; padding:28px; border:1px solid var(--line); border-radius:18px; background:color-mix(in srgb,var(--surface) 82%,transparent); counter-increment:steps; }
+.experience-steps li::before { content:"0" counter(steps); color:var(--accent); font:700 12px/1 ui-monospace,monospace; }
+.experience-steps h3 { margin:62px 0 10px; font-size:1.25rem; }
+.experience-steps p { margin:0; color:var(--muted); }
+.marketing-statement { max-width:820px; padding:130px 0; }
+.marketing-statement h2 { margin:0 0 22px; font-size:clamp(2.5rem,6vw,5rem); }
+.trust-panel { margin-bottom:100px; padding:clamp(28px,6vw,58px); display:grid; grid-template-columns:1fr 1fr; gap:34px 70px; align-items:start; border:1px solid var(--line); border-radius:24px; background:var(--surface); }
+.trust-panel h2 { margin:0; font-size:clamp(2rem,4vw,3.2rem); }
+.trust-list { display:grid; gap:22px; }
+.trust-list article { padding-bottom:20px; border-bottom:1px solid var(--line); }
+.trust-list article:last-child { border-bottom:0; }
+.trust-list h3 { margin:0 0 7px; font-size:1rem; }
+.trust-list p { margin:0; color:var(--muted); }
+.trust-panel>.marketing-button { justify-self:start; }
+.marketing-footer { width:min(calc(100% - 32px),1080px); margin:auto; }
 :focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
-@media (max-width:720px) { .page-links { display:none; } .brand span:last-child { display:none; } .support-card { grid-template-columns:1fr; } .legal-shell { margin-top:38px; } }
+@media (max-width:720px) { .page-links { display:none; } .brand span:last-child { display:none; } .support-card { grid-template-columns:1fr; } .legal-shell { margin-top:38px; } .marketing-hero { min-height:auto; grid-template-columns:1fr; padding:72px 0; } .marketing-symbol { width:260px; } .marketing-grid,.experience-steps,.trust-panel { grid-template-columns:1fr; } .marketing-grid article { min-height:220px; border-right:0; border-bottom:1px solid var(--line); } .marketing-grid article:last-child { border-bottom:0; } .experience-section,.marketing-statement { padding:90px 0; } }
 @media (prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; } }
