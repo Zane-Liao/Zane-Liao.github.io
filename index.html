@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Zane Liao 的个人网站，记录独立开发、Swift 与产品构建。">
+  <meta name="description" content="Zane Liao’s personal site about computer science, independent development, and technical practice.">
   <meta name="theme-color" content="#080b12">
   <link rel="canonical" href="https://zane-liao.github.io/">
   <title>Zane Liao — 独立开发者</title>
@@ -20,13 +20,14 @@
         <span class="brand-mark">ZL</span>
         <span>Zane Liao</span>
       </a>
-      <nav class="nav-links" id="site-nav" aria-label="主要导航">
-        <a href="#work">项目</a>
-        <a href="#writing">文章</a>
-        <a href="#about">关于</a>
-        <a href="#legal">法律条款</a>
+      <nav class="nav-links" id="site-nav" aria-label="主要导航" data-i18n-aria="navLabel">
+        <a href="#focus" data-i18n="navFocus">Focus</a>
+        <a href="#writing" data-i18n="navWriting">Writing</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="support/" data-i18n="navSupport">Support</a>
       </nav>
       <div class="nav-actions">
+        <label class="language-label"><span class="sr-only">Language</span><select class="language-select" data-language-select aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="es">ES</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh-CN">简中</option><option value="zh-TW">繁中</option></select></label>
         <button class="icon-button" id="theme-toggle" type="button" aria-label="切换颜色主题">
           <span class="theme-icon" aria-hidden="true">◐</span>
         </button>
@@ -38,58 +39,45 @@
   <main id="main">
     <section class="hero section" id="top">
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="status-dot"></span> Independent developer · Shanghai</p>
-        <h1>把想法做成<br><span>真正能用的产品。</span></h1>
-        <p class="hero-lede">你好，我是 Zane。我关注 Apple 平台、系统工具与 AI，持续记录从想法、设计到上线的完整过程。</p>
+        <p class="eyebrow"><span class="status-dot"></span> <span data-i18n="heroEyebrow">Independent developer · Shanghai</span></p>
+        <h1><span data-i18n="heroTitle">Turn ideas into</span><br><span data-i18n="heroTitleOutline">useful things.</span></h1>
+        <p class="hero-lede" data-i18n="heroLede">Hi, I’m Zane. I study computer science, design digital products, and document the path from thinking to making.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">查看项目 <span aria-hidden="true">↘</span></a>
-          <a class="button button-quiet" href="mailto:lzq666amn@gmail.com">联系我</a>
+          <a class="button button-primary" href="#writing"><span data-i18n="readNotes">Read my notes</span> <span aria-hidden="true">↘</span></a>
+          <a class="button button-quiet" href="mailto:lzq666amn@gmail.com" data-i18n="contactMe">Contact me</a>
         </div>
       </div>
-      <div class="signal-card reveal" aria-label="当前状态">
-        <div class="signal-top"><span>NOW BUILDING</span><span class="live-label">LIVE</span></div>
-        <div class="signal-orbit" aria-hidden="true"><span></span><span></span><span></span><b>01</b></div>
+      <div class="signal-card reveal" aria-label="Profile signal">
+        <div class="signal-top"><span>NEONBYTE / 2026</span><span class="live-label">ONLINE</span></div>
+        <div class="signal-orbit" aria-hidden="true"><span></span><span></span><span></span><b>ZL</b></div>
         <div class="signal-copy">
-          <p class="signal-title">CleanMyIPhone</p>
-          <p>本地优先的 iPhone 空间整理与媒体工具。</p>
+          <p class="signal-title" data-i18n="signalTitle">Think independently. Keep building.</p>
+          <p data-i18n="signalCopy">Computer science, product design, and technical practice.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="work">
+    <section class="section" id="focus">
       <div class="section-heading reveal">
-        <div><p class="eyebrow">Selected work</p><h2>正在构建</h2></div>
-        <p>从真实需求出发，做小而完整的产品。</p>
+        <div><p class="eyebrow">Focus</p><h2 data-i18n="focusTitle">Areas of focus</h2></div>
+        <p data-i18n="focusIntro">Solving real problems with thoughtful engineering and clear design.</p>
       </div>
-      <article class="project-card reveal">
-        <div class="project-index">01</div>
-        <div class="project-body">
-          <div class="project-meta"><span>iOS Utility</span><span>In development</span></div>
-          <h3>CleanMyIPhone</h3>
-          <p>帮助用户查看、整理和转换设备上的照片、视频与文件。核心处理留在设备本地，隐私不是附加功能，而是产品设计的一部分。</p>
-          <ul class="tag-list" aria-label="使用技术">
-            <li>SwiftUI</li><li>Photos</li><li>StoreKit</li><li>On-device</li>
-          </ul>
-          <div class="project-links">
-            <a href="cleanmyiphone/privacy/">隐私政策 <span aria-hidden="true">↗</span></a>
-            <a href="cleanmyiphone/terms/">服务条款 <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
-        <div class="project-visual" aria-hidden="true">
-          <div class="phone-frame"><div class="phone-island"></div><div class="storage-ring"><span>LOCAL</span></div><div class="phone-bars"><i></i><i></i><i></i></div></div>
-        </div>
-      </article>
+      <div class="focus-grid reveal">
+        <article><span>01</span><h3 data-i18n="focusOneTitle">Native development</h3><p data-i18n="focusOneCopy">Exploring Apple platforms and high-quality native experiences.</p></article>
+        <article><span>02</span><h3 data-i18n="focusTwoTitle">Systems &amp; algorithms</h3><p data-i18n="focusTwoCopy">Understanding fundamentals and turning complex problems into reliable implementations.</p></article>
+        <article><span>03</span><h3 data-i18n="focusThreeTitle">Product thinking</h3><p data-i18n="focusThreeCopy">Testing and iterating from discovery and design through release.</p></article>
+      </div>
     </section>
 
     <section class="section" id="writing">
       <div class="section-heading reveal">
-        <div><p class="eyebrow">Notes & process</p><h2>最近文章</h2></div>
-        <p>关于独立开发、产品判断与技术实践。</p>
+        <div><p class="eyebrow">Notes & process</p><h2 data-i18n="writingTitle">Recent writing</h2></div>
+        <p data-i18n="writingIntro">Notes on independent development, product judgment, and technical practice.</p>
       </div>
       <div class="article-list">
         <a class="article-row reveal" href="posts/independent-development.html">
           <time datetime="2025-03-30">2025.03.30</time>
-          <div><h3>从 0 到 1 的独立开发者之路</h3><p>记录 App idea，以及关于产品、市场和独立开发的一些思考。</p></div>
+          <div><h3 data-i18n="articleTitle">The path from zero to independent developer</h3><p data-i18n="articleSummary">Notes on ideas, products, markets, and independent development.</p></div>
           <span class="article-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
@@ -97,10 +85,10 @@
 
     <section class="section about" id="about">
       <div class="about-grid reveal">
-        <div><p class="eyebrow">About</p><h2>学习、构建、发布，<br>然后继续迭代。</h2></div>
+        <div><p class="eyebrow">About</p><h2 data-i18n="aboutTitle">Learn, build, ship, then iterate.</h2></div>
         <div class="about-copy">
-          <p>我正在学习计算机科学并实践独立开发，希望通过持续做产品，把技术能力转化为真实价值。</p>
-          <p>目前主要使用 Swift、Rust、C++ 和 Python，也持续研究算法、产品设计和创业。</p>
+          <p data-i18n="aboutOne">I’m studying computer science and practicing independent development, turning technical ability into useful outcomes by making things consistently.</p>
+          <p data-i18n="aboutTwo">I currently work mainly with Swift, Rust, C++, and Python while exploring algorithms, product design, and entrepreneurship.</p>
           <div class="skill-line"><span>Swift</span><span>Rust</span><span>C++</span><span>Python</span><span>Algorithms</span></div>
         </div>
       </div>
@@ -108,7 +96,7 @@
 
     <section class="contact section reveal" id="contact">
       <p class="eyebrow">Let’s connect</p>
-      <h2>有想法？一起聊聊。</h2>
+      <h2 data-i18n="contactTitle">Have an idea? Let’s talk.</h2>
       <div class="contact-links">
         <a href="mailto:lzq666amn@gmail.com">Email <span>↗</span></a>
         <a href="https://github.com/Zane-Liao" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
@@ -122,13 +110,15 @@
       <p>© <span id="year">2026</span> Zane Liao</p>
     </div>
     <nav class="footer-legal" aria-label="法律条款">
-      <p class="footer-label">CleanMyIPhone</p>
-      <a href="cleanmyiphone/privacy/">隐私政策 <span aria-hidden="true">↗</span></a>
-      <a href="cleanmyiphone/terms/">服务条款 <span aria-hidden="true">↗</span></a>
+      <p class="footer-label" data-i18n="footerHelp">Help &amp; legal</p>
+      <a href="support/"><span data-i18n="support">Support</span> <span aria-hidden="true">↗</span></a>
+      <a href="privacy/"><span data-i18n="privacy">Privacy Policy</span> <span aria-hidden="true">↗</span></a>
+      <a href="terms/"><span data-i18n="terms">Terms of Service</span> <span aria-hidden="true">↗</span></a>
     </nav>
     <p class="footer-location">Designed and built in Shanghai.</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

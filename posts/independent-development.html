@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +21,7 @@
         <a href="../#work">项目</a><a href="../#writing">文章</a><a href="../#about">关于</a>
       </nav>
       <div class="nav-actions">
+        <select class="language-select" data-article-language aria-label="Language"><option value="en">EN</option><option value="fr">FR</option><option value="es">ES</option><option value="ja">日本語</option><option value="ko">한국어</option><option value="zh-CN">简中</option><option value="zh-TW">繁中</option></select>
         <button class="icon-button" id="theme-toggle" type="button" aria-label="切换颜色主题"><span aria-hidden="true">◐</span></button>
         <button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
       </div>
@@ -28,16 +29,16 @@
   </header>
 
   <main class="post-shell" id="article">
-    <a class="back-link" href="../#writing"><span aria-hidden="true">←</span> 返回文章列表</a>
+    <a class="back-link" href="../#writing"><span aria-hidden="true">←</span> <span data-article-back>Back to writing</span></a>
     <article>
       <header class="article-header">
         <p class="eyebrow">Independent development</p>
-        <h1>从 0 到 1 的<br>独立开发者之路</h1>
-        <p class="article-intro">记录一个产品想法，以及我对独立开发、市场判断和快速验证的阶段性思考。</p>
-        <div class="article-meta"><time datetime="2025-03-30">2025 年 3 月 30 日</time><span>约 6 分钟阅读</span></div>
+        <h1 data-article-title>The path from zero to independent developer</h1>
+        <p class="article-intro" data-article-intro>Notes on product ideas, independent development, market judgment, and rapid validation.</p>
+        <div class="article-meta"><time datetime="2025-03-30" data-article-date>March 30, 2025</time><span data-article-reading>6 min read</span></div>
       </header>
 
-      <div class="post-content">
+      <div class="post-content" data-article-content>
         <h2>如何从 0 到 1 做独立开发</h2>
         <p>独立开发是一条充满挑战、但也极具回报的道路。作为一名独立开发者，需要同时承担产品、设计、开发和营销等不同角色。</p>
 
@@ -82,6 +83,6 @@
   </main>
 
   <footer class="site-footer"><p>© <span id="year">2026</span> Zane Liao</p><p>持续学习，持续构建。</p></footer>
-  <script src="../script.js"></script>
+  <script src="../article-i18n.js"></script><script src="../script.js"></script>
 </body>
 </html>
